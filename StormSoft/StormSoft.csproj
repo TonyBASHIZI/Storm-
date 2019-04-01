@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65DD96C1-888F-4941-B1AF-B3C6573818C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StormSoft</RootNamespace>
+    <AssemblyName>StormSoft</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalReport1.cs">
+      <HintPath>obj\Debug\CrystalReport1.cs.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="ExcelLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ExcelLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommServer, Version=1.21.0.0, Culture=neutral, PublicKeyToken=515d87df384dcc81, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GSMCommServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommShared, Version=1.21.0.0, Culture=neutral, PublicKeyToken=515d87df384dcc81, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GSMCommShared.dll</HintPath>
+    </Reference>
+    <Reference Include="GSMCommunication, Version=1.21.0.0, Culture=neutral, PublicKeyToken=515d87df384dcc81, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\GSMCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\setup\mysql.DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PDUConverter, Version=1.21.0.0, Culture=neutral, PublicKeyToken=515d87df384dcc81, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PDUConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="Properties.Resources.Designer.cs">
+      <HintPath>obj\Debug\Properties.Resources.Designer.cs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.2774.19990, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\essai qr code\essai qr code\bin\Debug\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classe\ClassArbre.cs" />
+    <Compile Include="classe\ClassBonus.cs" />
+    <Compile Include="classe\ClassCategorie.cs" />
+    <Compile Include="classe\ClassClient.cs" />
+    <Compile Include="classe\ClassPourcentage.cs" />
+    <Compile Include="classe\ClassPrix.cs" />
+    <Compile Include="classe\ClassUsers.cs" />
+    <Compile Include="classe\connexion.cs" />
+    <Compile Include="classe\glossaire.cs" />
+    <Compile Include="formulaires\accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\accueil.Designer.cs">
+      <DependentUpon>accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\authentification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\authentification.Designer.cs">
+      <DependentUpon>authentification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formConsommation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formConsommation.Designer.cs">
+      <DependentUpon>formConsommation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formNewParenage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formNewParenage.Designer.cs">
+      <DependentUpon>formNewParenage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formParenage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formParenage.Designer.cs">
+      <DependentUpon>formParenage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formPrinciapal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formPrinciapal.Designer.cs">
+      <DependentUpon>formPrinciapal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formPrixPourcentage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formPrixPourcentage.Designer.cs">
+      <DependentUpon>formPrixPourcentage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formRecherche.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formRecherche.Designer.cs">
+      <DependentUpon>formRecherche.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formUsers.Designer.cs">
+      <DependentUpon>formUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\newClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\newClient.Designer.cs">
+      <DependentUpon>newClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\sms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\sms.Designer.cs">
+      <DependentUpon>sms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\SplashStorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\SplashStorm.Designer.cs">
+      <DependentUpon>SplashStorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\textPic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\textPic.Designer.cs">
+      <DependentUpon>textPic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report\bonus.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\bonus.Designer.cs">
+      <DependentUpon>bonus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\carte.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\carte.Designer.cs">
+      <DependentUpon>carte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\client.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\client.Designer.cs">
+      <DependentUpon>client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\consommation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\consommation.Designer.cs">
+      <DependentUpon>consommation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\JournalOperation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\JournalOperation.Designer.cs">
+      <DependentUpon>JournalOperation.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="formulaires\accueil.resx">
+      <DependentUpon>accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\authentification.resx">
+      <DependentUpon>authentification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formConsommation.resx">
+      <DependentUpon>formConsommation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formNewParenage.resx">
+      <DependentUpon>formNewParenage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formParenage.resx">
+      <DependentUpon>formParenage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formPrinciapal.resx">
+      <DependentUpon>formPrinciapal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formPrixPourcentage.resx">
+      <DependentUpon>formPrixPourcentage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formRecherche.resx">
+      <DependentUpon>formRecherche.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formUsers.resx">
+      <DependentUpon>formUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\newClient.resx">
+      <DependentUpon>newClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\sms.resx">
+      <DependentUpon>sms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\SplashStorm.resx">
+      <DependentUpon>SplashStorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\textPic.resx">
+      <DependentUpon>textPic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="report\bonus.resx">
+      <DependentUpon>bonus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\carte.resx">
+      <DependentUpon>carte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\client.resx">
+      <DependentUpon>client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\consommation.resx">
+      <DependentUpon>consommation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\JournalOperation.resx">
+      <DependentUpon>JournalOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.CustomInstaller.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlBulkLoader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientFactory.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommand.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlCommandBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlConnectionStringBuilder.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataAdapter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlDataReader.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlError.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlHelper.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlInfoMessageEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameter.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlParameterCollection.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlRowUpdatingEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScript.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlScriptEventArgs.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlStatementExecutedEventHandler.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTrace.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlTransaction.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.MySqlClient.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlConversionException.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlDateTime.datasource" />
+    <None Include="Properties\DataSources\MySql.Data.Types.MySqlDecimal.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\EmptyContact%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
