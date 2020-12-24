@@ -99,6 +99,7 @@
             new DevExpress.XtraEditors.Repository.SearchButton()});
             this.searchControl1.Size = new System.Drawing.Size(737, 30);
             this.searchControl1.TabIndex = 19;
+            this.searchControl1.SelectedIndexChanged += new System.EventHandler(this.searchControl1_SelectedIndexChanged);
             // 
             // comboBox1
             // 

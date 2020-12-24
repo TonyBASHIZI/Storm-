@@ -19,7 +19,9 @@ namespace StormSoft.formulaires
         public formPrinciapal(string str_value)
         {
             InitializeComponent();
-            label3.Text = str_value;
+            donnerAcces(str_value);
+            LblConnectedUser.Caption = str_value;
+            use.Text = str_value;
         }
         public formPrinciapal()
         {
@@ -40,25 +42,57 @@ namespace StormSoft.formulaires
                 barButtonItem9.Enabled = true;
                 barButtonItem10.Enabled = true;
                 barButtonItem12.Enabled = true;
+                barButtonItem15.Enabled = true;
+                barButtonItem16.Enabled = true;
+                barButtonItem20.Enabled = true;
+                barButtonItem1.Enabled = true;
+                barButtonItem11.Enabled = true;
+                barButtonItem2.Enabled = true;
+                barButtonItem14.Enabled = true;
+                barButtonItem5.Enabled = true;
+                barButtonItem6.Enabled = true;
+                barButtonItem7.Enabled = true;
+                barButtonItem8.Enabled = true;
+                barButtonItem21.Enabled = true;
+                barButtonItem24.Enabled = true;
+                barButtonItem24.Enabled = true;
+                barButtonItem23.Enabled = true;
+
 
             }
-            else if (niveau == "UtilisateurA")
+           
+            else
             {
-                barButtonItem3.Enabled = false;
+                
                 barButtonItem9.Enabled = false;
                 barButtonItem10.Enabled = false;
                 barButtonItem12.Enabled = false;
+                barButtonItem15.Enabled = false;
+                barButtonItem16.Enabled = false;
+                barButtonItem20.Enabled = true;
+                barButtonItem1.Enabled = false;
+                barButtonItem11.Enabled = false;
+                barButtonItem22.Enabled = false;
+                barButtonItem19.Enabled = false;
+                barButtonItem5.Enabled = false;
+                barButtonItem6.Enabled = false;
+                barButtonItem21.Enabled = false;
+                barButtonItem24.Enabled = false;
+                barButtonItem17.Enabled = false;
+                barButtonItem25.Enabled = false; 
+                barButtonItem23.Enabled = false;
             }
 
 
         }
         private void formPrinciapal_Load(object sender, EventArgs e)
         {
-            accueil ac = new accueil();
-            ac.MdiParent = this;
-            ac.Show();
+            string link = use.Text;
 
-
+            formAccueil p = new formAccueil();
+            p.MdiParent = this;
+            p.Show();
+            
         }
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
@@ -77,7 +111,16 @@ namespace StormSoft.formulaires
 
         private void formPrinciapal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            var result = MessageBox.Show("Voulez-vous quitter l'application?", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+           // Application.Exit();
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
@@ -98,7 +141,7 @@ namespace StormSoft.formulaires
 
         private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
         {
-            formUsers us = new formUsers();
+            loginAdmin us = new loginAdmin();
             us.ShowDialog();
         }
 
@@ -111,7 +154,7 @@ namespace StormSoft.formulaires
 
         private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
         {
-            formPrixPourcentage pp = new formPrixPourcentage();
+            loginAdmin pp = new loginAdmin();
             pp.ShowDialog();
 
         }
@@ -128,6 +171,104 @@ namespace StormSoft.formulaires
             formRecherche rech = new formRecherche();
             rech.MdiParent = this;
             rech.Show();
+        }
+
+        private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            loginAdmin pp = new loginAdmin();
+            pp.ShowDialog();
+        }
+
+        private void barButtonItem16_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            partennaireForm p = new partennaireForm();
+            p.MdiParent = this;
+            p.Show();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formExport p = new formExport();
+            p.MdiParent = this;
+            p.Show();
+        }
+
+        private void barButtonItem17_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            accueil p = new accueil();
+            p.MdiParent = this;
+            p.Show();
+        }
+
+        private void barButtonItem18_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Hide();
+            authentification us = new authentification();
+            us.ShowDialog();
+        }
+
+        private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formBusiness p = new formBusiness();
+            p.MdiParent = this;
+            p.Show();
+        }
+
+        private void barButtonItem20_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string link = use.Text;
+
+            stationForm p = new stationForm(use.Text);
+            p.MdiParent = this;
+            p.Show();
+
+        }
+
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formExportSuivis p = new formExportSuivis();
+            p.MdiParent = this;
+            p.Show();
+
+        }
+
+        private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formBalance p = new formBalance();
+            p.MdiParent = this;
+            p.Show();
+        }
+
+        private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string link = use.Text;
+
+            stationForm p = new stationForm(use.Text);
+            p.MdiParent = this;
+            p.Show();
+        }
+
+        private void barButtonItem24_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            loginAdmin pp = new loginAdmin();
+            pp.ShowDialog();
+           
+        }
+
+        private void barButtonItem25_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formRetrait p = new formRetrait();
+            p.MdiParent = this;
+            p.Show();
+        }
+
+        private void barButtonItem27_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string link = use.Text;
+
+            formGerantBusiness p = new formGerantBusiness(use.Text);
+            p.MdiParent = this;
+            p.Show();
         }
     }
 }

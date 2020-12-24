@@ -21,8 +21,7 @@ namespace StormSoft.formulaires
 
         private void formPrixPourcentage_Load(object sender, EventArgs e)
         {
-            textBox2.Text = glos.chargerPourcentN1();
-            textBox1.Text = glos.chargerPourcentN0();
+            
             txtPdies.Text = glos.chargerPrixDie();
             txtpEs.Text = glos.chargerPrixE();
             txtPetro.Text = glos.chargerPrixPetro();
@@ -51,11 +50,13 @@ namespace StormSoft.formulaires
                 ClassPourcentage p = new ClassPourcentage();
                 p.Niveau1 =int.Parse(textBox2.Text);
                 p.Niveau0 = int.Parse(textBox1.Text);
+                p.Id = int.Parse(labelID.Text);
+                p.Categorie = comboBox1.Text;
                 p.Date_fin =DateTime.Parse(dateTimePicker1.Text);
 
                 glos.updatedPourcent(p);
-                textBox2.Text = glos.chargerPourcentN1();
-                textBox1.Text = glos.chargerPourcentN0();
+                textBox2.Text = glos.chargerPourcentN1(comboBox1.Text);
+                textBox1.Text = glos.chargerPourcentN0(comboBox1.Text);
 
             }
             catch (Exception ex)
@@ -66,15 +67,75 @@ namespace StormSoft.formulaires
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            ClassPrix clp = new ClassPrix();
-            clp.PrixE = Double.Parse(txtpEs.Text);
-            clp.PrixD = Double.Parse(txtPdies.Text);
-            clp.PrixP = Double.Parse(txtPetro.Text);
 
-            glos.updatedPDiesel(clp);
-            glos.updatedPEss(clp);
-            glos.updatedPPetro(clp);
 
+            MessageBox.Show("Service non disponible!");
+            //ClassPrix clp = new ClassPrix();
+            //clp.PrixE = Double.Parse(txtpEs.Text);
+            //clp.PrixD = Double.Parse(txtPdies.Text);
+            //clp.PrixP = Double.Parse(txtPetro.Text);
+
+           // glos.updatedPDiesel(clp);
+            //glos.updatedPEss(clp);
+           // glos.updatedPPetro(clp);
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelID.Text = glos.chargerID(comboBox1.Text);
+            textBox2.Text = glos.chargerPourcentN1(comboBox1.Text);
+            textBox1.Text = glos.chargerPourcentN0(comboBox1.Text);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+            for (int i = 0; i < textBox1.Text.Length; i++)
+            {
+                if (!char.IsDigit(textBox1.Text, i))
+                {
+                    MessageBox.Show("Donnée incorrecte ce champ ne peut que prendre les chiffres entiers!!");
+                    textBox1.Text = "";
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < textBox2.Text.Length; i++)
+            {
+                if (!char.IsDigit(textBox2.Text, i))
+                {
+                    MessageBox.Show("Donnée incorrecte ce champ ne peut que prendre les chiffres entiers!!");
+                    textBox2.Text = "";
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+
+            panel2.BackColor = Color.Green;
+            
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            panel2.BackColor = Color.Transparent;
         }
     }
 }

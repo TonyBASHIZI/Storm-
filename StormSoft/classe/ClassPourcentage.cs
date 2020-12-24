@@ -9,6 +9,8 @@ namespace StormSoft.classe
     class ClassPourcentage
     {
         private int niveau0, niveau1;
+        public string Categorie { get; set; }
+        public int Id { get; set; }
 
         public int Niveau0
         {

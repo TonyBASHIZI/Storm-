@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>GSMComm</id>
+    <version>1.21.1</version>
+    <title>GSMComm</title>
+    <authors>Stefan Mayr</authors>
+    <owners>Stefan Mayr</owners>
+    <projectUrl>http://www.scampers.org/steve/sms/libraries.htm</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>GSMComm is package for GSM phones, mainly for performing SMS-related tasks.</description>
+    <summary>SMS libraries for GSM phones</summary>
+    <tags>sms gsm message communication pdu</tags>
+  </metadata>
+</package>

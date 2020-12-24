@@ -1,30 +1,46 @@
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\bin\Debug\StormSoft.exe.config
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\bin\Debug\StormSoft.exe
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\bin\Debug\StormSoft.pdb
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.SplashStorm.resources
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.csproj.GenerateResource.Cache
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.exe.licenses
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.exe
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.pdb
-c:\users\wathony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.Properties.Resources.resources
-C:\Users\WaThony\Documents\Visual Studio 2013\Projects\StormSoft\StormSoft\bin\Debug\MySql.Data.dll
-C:\Users\WaThony\Documents\Visual Studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.authentification.resources
-C:\Users\WaThony\Documents\Visual Studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formPrinciapal.resources
-C:\Users\WaThony\Documents\Visual Studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.newClient.resources
-C:\Users\WaThony\Documents\Visual Studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.accueil.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\bin\Debug\CrystalReport1.cs.dll
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\bin\Debug\Properties.Resources.Designer.cs.dll
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\bin\Debug\ThoughtWorks.QRCode.dll
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formParenage.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formNewParenage.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formConsommation.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.csprojResolveAssemblyReference.cache
-C:\Users\WaThony\Documents\Visual Studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formUsers.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.report.carte.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formPrixPourcentage.resources
-C:\Users\WaThony\Documents\Visual Studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.sms.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.report.JournalOperation.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formRecherche.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.report.consommation.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.report.client.resources
-C:\Users\WaThony\documents\visual studio 2013\Projects\StormSoft\StormSoft\obj\Debug\StormSoft.report.bonus.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.exe
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.accueil.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.authentification.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formConsommation.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formExport.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formNewParenage.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formParenage.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formPrinciapal.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formPrixPourcentage.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formRecherche.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formUsers.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.fromPaie.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.newClient.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.partennaireForm.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.sms.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.SplashStorm.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.Properties.Resources.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.arbre.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.Avantage.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.bonus.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.carte.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.client.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.consommation.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.consommatioStation.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.JournalOperation.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.partennaire.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.report.users.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.csproj.GenerateResource.Cache
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.exe.licenses
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.pdb
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\StormSoft.exe.config
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\StormSoft.exe
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\StormSoft.pdb
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\CrystalReport1.cs.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\GSMCommServer.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\GSMCommShared.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\GSMCommunication.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\MySql.Data.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\PDUConverter.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\Properties.Resources.Designer.cs.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\bin\Debug\ThoughtWorks.QRCode.dll
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.csprojResolveAssemblyReference.cache
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formEnregistrement.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.stationForm.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formExportSuivis.resources
+D:\BACKUP STORMV3\StormSoft\StormSoft\obj\Debug\StormSoft.formulaires.formBalance.resources

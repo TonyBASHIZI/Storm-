@@ -44,7 +44,7 @@ namespace StormSoft.formulaires
             txtPource.Text = "";
             txtpource0.Text = "";
             txtprix.Text = "";
-            txtrs.Text = "";
+            //txtrs.Text = "";
             txtrs0.Text = "";
             txttel.Text = "";
             txttel0.Text = "";
@@ -54,10 +54,10 @@ namespace StormSoft.formulaires
 
         private void formConsommation_Load(object sender, EventArgs e)
         {
-            
-            glos.chargerMat(comboMat);
+            progressPanel1.Visible = false;
+            //glos.chargerMat(comboMat);
             labelCl.Text = ""+glos.countCl();
-            label12.Text = glos.countConso();
+            label12.Text = glos.SUMConso();
             glos.chargerConso(dataGridView1,dateEdit1.Text);
 
             
@@ -72,14 +72,14 @@ namespace StormSoft.formulaires
             try
             {
                 
-                txtrs.Text = glos.findReseax(comboMat.Text);
-                txttel.Text = glos.findNumber(txtrs.Text);
-                txtrs0.Text = glos.findReseax(txtrs.Text);
+                //txtrs.Text = glos.findReseax(comboMat.Text);
+                txttel.Text = glos.findNumber(comboMat.Text);
+                txtrs0.Text = glos.findReseax(comboMat.Text);
                 txttel0.Text = glos.findNumber(txtrs0.Text);
                 labID.Text = glos.findIDcons(comboMat.Text);
 
-                double pourcen1 = Double.Parse(glos.chargerPourcentN1());
-                double pourcen0 = Double.Parse(glos.chargerPourcentN0());
+                //double pourcen1 = Double.Parse(glos.chargerPourcentN1());
+                //double pourcen0 = Double.Parse(glos.chargerPourcentN0());
                 
            
                     double q = Double.Parse(txtqte.Text);
@@ -89,8 +89,8 @@ namespace StormSoft.formulaires
                     txtdo.Text = "" + Double.Parse(txtfc.Text) / 1600;
                     double p1 = Double.Parse(txtfc.Text);
 
-                    txtPource.Text = "" + p1 * pourcen1 / 100;
-                    txtpource0.Text = "" + p1 * pourcen0 / 100;
+                    //txtPource.Text = "" + p1 * pourcen1 / 100;
+                    //txtpource0.Text = "" + p1 * pourcen0 / 100;
 
             }
             catch(Exception ex)
@@ -141,44 +141,31 @@ namespace StormSoft.formulaires
                 comboMat.Text = dataGridView1.Rows[i].Cells["mat"].FormattedValue.ToString();
                 txtqte.Text = dataGridView1.Rows[i].Cells["qte"].FormattedValue.ToString();
                 txtprix.Text = dataGridView1.Rows[i].Cells["prix"].FormattedValue.ToString();
+               // double x = Double.Parse(txtqte.Text);
                 try
                 {
 
-                    txtrs.Text = glos.findReseax(comboMat.Text);
-                    txttel.Text = glos.findNumber(txtrs.Text);
+                    //txtrs.Text = glos.findReseax(comboMat.Text);
+                    txttel.Text = glos.findNumber(comboMat.Text);
                     
                     labID.Text = glos.findIDcons(comboMat.Text);
-                    if (txtrs0.Text == "")
-                    {
-
-                    }
-                    else
-                    {
-                        if (glos.findReseax(txtrs.Text) == "")
-                        {
-
-                        }
-                        else
-                        {
-                            txtrs0.Text = glos.findReseax(txtrs.Text);
-                            txttel0.Text = glos.findNumber(txtrs0.Text);
-                        }
-                        
-                    }
                     
-                    double pourcen1 = Double.Parse(glos.chargerPourcentN1());
-                    double pourcen0 = Double.Parse(glos.chargerPourcentN0());
+                        
+                    txtrs0.Text = glos.findReseax(comboMat.Text);
+                    txttel0.Text = glos.findNumber(txtrs0.Text);
+                    //double pourcen1 = Double.Parse(glos.chargerPourcentN1());
+                    //double pourcen0 = Double.Parse(glos.chargerPourcentN0()) ;
 
                     double q = Double.Parse(txtqte.Text);
                     double p = Double.Parse(txtprix.Text);
                     double taux = Double.Parse(txttaux.Text);
 
-                    txtfc.Text = "" + q * p;
-                    txtdo.Text = "" + Double.Parse(txtfc.Text) / taux;
-                    double p1 = Double.Parse(txtfc.Text);
+                    txtfc.Text = "" + (q * p);
+                    txtdo.Text = "" + (Double.Parse(txtfc.Text) / taux);
+                    //double p1 = Double.Parse(txtfc.Text);
 
-                    txtPource.Text = "" + p1 * pourcen1 / taux;
-                    txtpource0.Text = "" + p1 * pourcen0 / taux ;
+                    //txtPource.Text = "" + (pourcen1 * q);
+                    //txtpource0.Text = "" + (pourcen0 * q);
 
                 }
                 catch (Exception ex)
@@ -194,7 +181,7 @@ namespace StormSoft.formulaires
         }
         public void inserB()
         {
-             
+            progressPanel1.Visible = true;
             try
             {
                 for (int x = 0; x < dataGridView1.Rows.Count; x++)
@@ -205,7 +192,7 @@ namespace StormSoft.formulaires
                     bo.Ref_cl = comboMat.Text;
                     bo.Qte = Double.Parse(txtqte.Text);
                     bo.Prix = Double.Parse(txtprix.Text);
-                    bo.Reseaux = txtrs.Text;
+                    //bo.Reseaux = txtrs.Text;
                     bo.Reseaux0 = txtrs0.Text;
                     bo.Montantfc = Double.Parse(txtfc.Text);
                     bo.Montantdo = Double.Parse(txtdo.Text);
@@ -213,11 +200,15 @@ namespace StormSoft.formulaires
                     bo.Pourcent0 = Double.Parse(txtpource0.Text);
                     bo.Tel = txttel.Text;
                     bo.Tel0 = txttel0.Text;
-                    glos.InsertBonus(bo,inser,update,dateEdit1.Text);
+                    glos.InsertBonus(bo,dateEdit1.Text);
 
                     initialiseChap();
+                    progressPanel1.Visible = true;
+                   
                 }
-                MessageBox.Show("Le nombre des insertions " + inser + " et des modifications " + update);
+                
+               // MessageBox.Show("Le nombre des insertions  et des modifications avec succes ");
+                glos.speakeer("FIN DE PROCESSUS");
                 
             }
             catch (Exception ex)
@@ -228,7 +219,13 @@ namespace StormSoft.formulaires
         }
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            inserB();
+            
+            DialogResult result = MessageBox.Show("Voulez-vous vraiment  commencer ce processus ? ca peut prendre quelques minutes", "Calcul bonus", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                inserB();
+            }
      
         }
 
@@ -241,71 +238,71 @@ namespace StormSoft.formulaires
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ClassBonus bo = new ClassBonus();
-                bo.Ref_cl = comboMat.Text;
-                bo.Qte = Double.Parse(txtqte.Text);
-                bo.Prix = Double.Parse(txtprix.Text);
-                bo.Reseaux = txtrs.Text;
-                bo.Reseaux0 = txtrs0.Text;
-                bo.Montantfc = Double.Parse(txtfc.Text);
-                bo.Montantdo = Double.Parse(txtdo.Text);
-                bo.Pourcent = Double.Parse(txtPource.Text);
-                bo.Pourcent0 = Double.Parse(txtpource0.Text);
-                bo.Tel = txttel.Text;
-                bo.Tel0 = txttel0.Text;
-                glos.InsertBonus(bo,inser,update,dateEdit1.Text);
-                initialiseChap();
+            //try
+            //{
+            //    ClassBonus bo = new ClassBonus();
+            //    bo.Ref_cl = comboMat.Text;
+            //    bo.Qte = Double.Parse(txtqte.Text);
+            //    bo.Prix = Double.Parse(txtprix.Text);
+            //    bo.Reseaux = txtrs.Text;
+            //    bo.Reseaux0 = txtrs0.Text;
+            //    bo.Montantfc = Double.Parse(txtfc.Text);
+            //    bo.Montantdo = Double.Parse(txtdo.Text);
+            //    bo.Pourcent = Double.Parse(txtPource.Text);
+            //    bo.Pourcent0 = Double.Parse(txtpource0.Text);
+            //    bo.Tel = txttel.Text;
+            //    bo.Tel0 = txttel0.Text;
+            //    glos.InsertBonus(bo,inser,update,dateEdit1.Text);
+            //    initialiseChap();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                comboMat.Text = dataGridView1.CurrentRow.Cells["mat"].FormattedValue.ToString();
-                txtqte.Text = dataGridView1.CurrentRow.Cells["qte"].FormattedValue.ToString();
-                txtprix.Text = dataGridView1.CurrentRow.Cells["prix"].FormattedValue.ToString();
-                try
-                {
+            //try
+            //{
+            //    comboMat.Text = dataGridView1.CurrentRow.Cells["mat"].FormattedValue.ToString();
+            //    txtqte.Text = dataGridView1.CurrentRow.Cells["qte"].FormattedValue.ToString();
+            //    txtprix.Text = dataGridView1.CurrentRow.Cells["prix"].FormattedValue.ToString();
+            //    try
+            //    {
 
-                    txtrs.Text = glos.findReseax(comboMat.Text);
-                    txttel.Text = glos.findNumber(txtrs.Text);
-                    txtrs0.Text = glos.findReseax(txtrs.Text);
-                    txttel0.Text = glos.findNumber(txtrs0.Text);
-                    labID.Text = glos.findIDcons(comboMat.Text);
+            //       // txtrs.Text = glos.findReseax(comboMat.Text);
+            //        txttel.Text = glos.findNumber(comboMat.Text);
+            //        txtrs0.Text = glos.findReseax(comboMat.Text);
+            //        txttel0.Text = glos.findNumber(txtrs0.Text);
+            //        labID.Text = glos.findIDcons(comboMat.Text);
 
-                    double pourcen1 = Double.Parse(glos.chargerPourcentN1());
-                    double pourcen0 = Double.Parse(glos.chargerPourcentN0());
+            //        double pourcen1 = Double.Parse(glos.chargerPourcentN1());
+            //        double pourcen0 = Double.Parse(glos.chargerPourcentN0());
 
 
-                    double q = Double.Parse(txtqte.Text);
-                    double p = Double.Parse(txtprix.Text);
+            //        double q = Double.Parse(txtqte.Text);
+            //        double p = Double.Parse(txtprix.Text);
 
-                    txtfc.Text = "" + q * p;
-                    txtdo.Text = "" + Double.Parse(txtfc.Text) / 1600;
-                    double p1 = Double.Parse(txtfc.Text);
+            //        txtfc.Text = "" + q * p;
+            //        txtdo.Text = "" + Double.Parse(txtfc.Text) / 1600;
+            //        double p1 = Double.Parse(txtfc.Text);
 
-                    txtPource.Text = "" + p1 * pourcen1 / 100;
-                    txtpource0.Text = "" + p1 * pourcen0 / 100;
+            //        txtPource.Text = "" + p1 * pourcen1 / 100;
+            //        txtpource0.Text = "" + p1 * pourcen0 / 100;
 
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.Message);
+            //    }
                 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -353,6 +350,27 @@ namespace StormSoft.formulaires
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void panel3_MouseEnter(object sender, EventArgs e)
+        {
+            panel3.ForeColor = Color.Red;
+
+        }
+
+        private void panel3_MouseLeave(object sender, EventArgs e)
+        {
+            panel3.ForeColor = Color.Transparent;
         }
     }
 }

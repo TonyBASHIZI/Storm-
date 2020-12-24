@@ -57,5 +57,20 @@ namespace StormSoft.formulaires
 
             }
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void marqueeProgressBarControl1_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

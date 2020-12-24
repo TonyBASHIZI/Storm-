@@ -50,6 +50,9 @@
     <StartupObject>
     </StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IMG-20190305-WA0001.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalReport1.cs">
       <HintPath>obj\Debug\CrystalReport1.cs.dll</HintPath>
@@ -96,6 +99,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\GSMCommunication.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
@@ -117,6 +125,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Speech" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -136,6 +145,7 @@
     <Compile Include="classe\ClassBonus.cs" />
     <Compile Include="classe\ClassCategorie.cs" />
     <Compile Include="classe\ClassClient.cs" />
+    <Compile Include="classe\ClassPartennaire.cs" />
     <Compile Include="classe\ClassPourcentage.cs" />
     <Compile Include="classe\ClassPrix.cs" />
     <Compile Include="classe\ClassUsers.cs" />
@@ -158,6 +168,12 @@
     </Compile>
     <Compile Include="formulaires\formConsommation.Designer.cs">
       <DependentUpon>formConsommation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\formExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\formExport.Designer.cs">
+      <DependentUpon>formExport.cs</DependentUpon>
     </Compile>
     <Compile Include="formulaires\formNewParenage.cs">
       <SubType>Form</SubType>
@@ -195,11 +211,23 @@
     <Compile Include="formulaires\formUsers.Designer.cs">
       <DependentUpon>formUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="formulaires\fromPaie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\fromPaie.Designer.cs">
+      <DependentUpon>fromPaie.cs</DependentUpon>
+    </Compile>
     <Compile Include="formulaires\newClient.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formulaires\newClient.Designer.cs">
       <DependentUpon>newClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulaires\partennaireForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulaires\partennaireForm.Designer.cs">
+      <DependentUpon>partennaireForm.cs</DependentUpon>
     </Compile>
     <Compile Include="formulaires\sms.cs">
       <SubType>Form</SubType>
@@ -213,14 +241,20 @@
     <Compile Include="formulaires\SplashStorm.Designer.cs">
       <DependentUpon>SplashStorm.cs</DependentUpon>
     </Compile>
-    <Compile Include="formulaires\textPic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formulaires\textPic.Designer.cs">
-      <DependentUpon>textPic.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report\arbre.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\arbre.Designer.cs">
+      <DependentUpon>arbre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\Avantage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\Avantage.Designer.cs">
+      <DependentUpon>Avantage.cs</DependentUpon>
+    </Compile>
     <Compile Include="report\bonus.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -251,6 +285,24 @@
     <Compile Include="report\JournalOperation.Designer.cs">
       <DependentUpon>JournalOperation.cs</DependentUpon>
     </Compile>
+    <Compile Include="report\consommatioStation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\consommatioStation.Designer.cs">
+      <DependentUpon>consommatioStation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\partennaire.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\partennaire.Designer.cs">
+      <DependentUpon>partennaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="report\users.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\users.Designer.cs">
+      <DependentUpon>users.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="formulaires\accueil.resx">
       <DependentUpon>accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formulaires\formConsommation.resx">
       <DependentUpon>formConsommation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\formExport.resx">
+      <DependentUpon>formExport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formulaires\formNewParenage.resx">
       <DependentUpon>formNewParenage.cs</DependentUpon>
@@ -278,17 +333,20 @@
     <EmbeddedResource Include="formulaires\formUsers.resx">
       <DependentUpon>formUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\fromPaie.resx">
+      <DependentUpon>fromPaie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formulaires\newClient.resx">
       <DependentUpon>newClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulaires\partennaireForm.resx">
+      <DependentUpon>partennaireForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formulaires\sms.resx">
       <DependentUpon>sms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formulaires\SplashStorm.resx">
       <DependentUpon>SplashStorm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formulaires\textPic.resx">
-      <DependentUpon>textPic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -301,6 +359,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="report\arbre.resx">
+      <DependentUpon>arbre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\Avantage.resx">
+      <DependentUpon>Avantage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="report\bonus.resx">
       <DependentUpon>bonus.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,9 +377,19 @@
     <EmbeddedResource Include="report\consommation.resx">
       <DependentUpon>consommation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="report\consommatioStation.resx">
+      <DependentUpon>consommatioStation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="report\JournalOperation.resx">
       <DependentUpon>JournalOperation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="report\partennaire.resx">
+      <DependentUpon>partennaire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\users.resx">
+      <DependentUpon>users.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\MySql.Data.MySqlClient.CustomInstaller.datasource" />
     <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlBulkLoader.datasource" />
     <None Include="Properties\DataSources\MySql.Data.MySqlClient.MySqlClientFactory.datasource" />
@@ -360,7 +434,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="IMG-20190305-WA0001.ico" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>

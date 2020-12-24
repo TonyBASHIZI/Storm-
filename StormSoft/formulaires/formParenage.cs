@@ -51,5 +51,10 @@ namespace StormSoft.formulaires
         {
 
         }
+
+        private void searchControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

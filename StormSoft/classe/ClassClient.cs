@@ -9,6 +9,21 @@ namespace StormSoft.classe
     class ClassClient
     {
         string mat, nom, postnom, prenom, adresse, etatcivil, tel, affiliation, reseaux, sexe;
+        string idcarte;
+        string id;
+
+        public string Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public int Ib { get; set; }
+
+        public string Idcarte
+        {
+            get { return idcarte; }
+            set { idcarte = value; }
+        }
 
         public string Sexe
         {
